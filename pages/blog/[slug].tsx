@@ -1,9 +1,9 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Image from "next/image";
 import Router from "next/router";
 import React from "react";
-import client from "../../client";
+import client, { urlFor } from "../../client";
 import { Post } from "../../src/utils/types";
-
 interface BlogPostProps {
   post: Post;
 }
@@ -18,6 +18,19 @@ const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
         {"<- Go back!"}
       </button>
       <br />
+
+      <div className="relative w-full h-[70vh]">
+        <Image
+          src={
+            post.mainImage ? urlFor(post.mainImage).url() : "/assets/code.jpg"
+          }
+          alt=""
+          layout="fill"
+          quality={100}
+          objectFit="cover"
+        />
+      </div>
+
       <h1>{post.title}</h1>
       <span>By {post.author}</span>
       <br />
@@ -46,6 +59,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       title,
       'slug': slug.current,
       'author': author->name,
+      mainImage,
       body,
     }
   `,

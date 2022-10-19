@@ -6,6 +6,7 @@ export type Post = {
   slug: string;
   author: string;
   body: PostBody[];
+  mainImage?: any;
 };
 
 export type PostBody = {
