@@ -1,4 +1,4 @@
-# Next blog using Sanity CMS
+# Next blog using Sanity CMS and Tailwind
 
 This project is built with the objective of creating a basic blog to implement Sanity CMS as the backend with information of the tools I use on a daily basis as a front end developer.
 
