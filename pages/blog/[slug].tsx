@@ -28,6 +28,8 @@ const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
           layout="fill"
           quality={100}
           objectFit="cover"
+          placeholder="blur"
+          blurDataURL="/assets/blur.png"
         />
       </div>
 
@@ -37,10 +39,10 @@ const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
       {post?.body.map((parts) => {
         let Tag = parts.children[0]._type;
         return (
-          <>
-            <Tag key={parts.children[0].text}>{parts.children[0].text}</Tag>
+          <div key={parts.children[0].text}>
+            <Tag>{parts.children[0].text}</Tag>
             <br />
-          </>
+          </div>
         );
       })}
     </>
