@@ -13,7 +13,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
     <>
       <button
         onClick={() => Router.back()}
-        className="py-2 px-4 rounded-lg bg-slate-800 text-white my-2 border-2 border-slate-800 hover:bg-transparent hover:text-black !hover:border-slate-50 duration-200"
+        className="py-2 px-4 rounded-full bg-slate-800 text-white my-2 border-[1px] border-slate-800 hover:bg-transparent hover:text-black !hover:border-slate-50 duration-300"
       >
         {"<- Go back!"}
       </button>
