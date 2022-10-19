@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next blog using Sanity CMS
 
-## Getting Started
+This project is built with the objective of creating a basic blog to implement Sanity CMS as the backend with information of the tools I use on a daily basis as a front end developer.
 
-First, run the development server:
+To install
 
 ```bash
-npm run dev
-# or
-yarn dev
+git pull
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If someone wants to experiment with this template with their own Sanity studio on their local environment, it will be necessary to install Sanity cli with the following command:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+npm i -g @sanity/cli
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+After this, create a new Sanity project with:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+sanity init
+```
 
-## Learn More
+After this, follow the Sanity cli steps and for ease of use just create a project with the Blog template already prepared by the Sanity team
 
-To learn more about Next.js, take a look at the following resources:
+When installed, you can now create your .env.local file with the following line:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+NEXT_SANITY_LOCAL_URL=localUrl
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+If the idea is to publish the blog you can create a new env variable with the published Sanity project's url.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Enjoy!
