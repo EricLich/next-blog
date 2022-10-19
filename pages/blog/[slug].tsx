@@ -11,7 +11,13 @@ interface BlogPostProps {
 const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
   return (
     <>
-      <button onClick={() => Router.back()}>Go back!</button>
+      <button
+        onClick={() => Router.back()}
+        className="py-2 px-4 rounded-lg bg-slate-800 text-white my-2 border-2 border-slate-800 hover:bg-transparent hover:text-black !hover:border-slate-50 duration-200"
+      >
+        {"<- Go back!"}
+      </button>
+      <br />
       <h1>{post.title}</h1>
       <span>By {post.author}</span>
       <br />
